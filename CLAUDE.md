@@ -1,3 +1,7 @@
+---
+env_file: .env.local
+---
+
 # ZTNET Chinese Edition - Development Rules
 
 ## Project Overview
