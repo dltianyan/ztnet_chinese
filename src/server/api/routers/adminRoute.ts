@@ -309,7 +309,7 @@ export const adminRouter = createTRPCRouter({
 			const { secret, expireTime, timesCanUse, groupId } = input;
 
 			const token = jwt.sign({ secret }, process.env.NEXTAUTH_SECRET, {
-				expiresIn: `${expireTime}m`,
+				expiresIn: Number(expireTime) * 60,
 			});
 			const url = `${process.env.NEXTAUTH_URL}/locale-redirect?invite=${token}`;
 
